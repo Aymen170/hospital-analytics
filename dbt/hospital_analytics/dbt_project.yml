@@ -1,0 +1,11 @@
+name: 'hospital_analytics'
+version: '1.0'
+config-version: 2
+
+profile: 'hospital_analytics'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
