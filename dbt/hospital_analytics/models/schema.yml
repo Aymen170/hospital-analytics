@@ -1,0 +1,45 @@
+version: 2
+
+sources:
+  - name: hospital_analytics_schema
+    database: hospital_analytics_db
+    schema: hospital_analytics_schema
+    tables:
+      - name: patients
+
+models:
+  - name: patients_hospitalization
+    description: "Vue des patients hospitalisés avec durée de séjour"
+    columns:
+      - name: id
+        description: "Identifiant unique du patient"
+        tests: [not_null, unique]
+      - name: date_admission
+        description: "Date d'admission du patient"
+        tests: [not_null]
+      - name: duree_sejour
+        description: "Durée fictive du séjour"
+        tests: [not_null]
+
+  - name: patients_demographics
+    description: "Démographie des patients par genre et tranche d'âge"
+    columns:
+      - name: sexe
+        description: "Genre du patient"
+        tests: [not_null]
+      - name: age_group
+        description: "Tranche d'âge du patient"
+        tests: [not_null]
+      - name: nb_patients
+        description: "Nombre de patients dans cette catégorie"
+        tests: [not_null]
+
+  - name: patients_admission_by_month
+    description: "Nombre de patients admis par mois"
+    columns:
+      - name: admission_month
+        description: "Mois d'admission"
+        tests: [not_null]
+      - name: nb_patients
+        description: "Nombre de patients admis ce mois"
+        tests: [not_null]

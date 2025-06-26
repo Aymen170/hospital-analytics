@@ -85,4 +85,4 @@ for i in range(1, NB_FACTURES + 1):
 df_factures = pd.DataFrame(factures)
 df_factures.to_csv(f"{output_path}/facturation.csv", index=False)
 
-print("✅ Données générées avec succès dans data/csv/")
+print("Données générées avec succès dans data/csv/")

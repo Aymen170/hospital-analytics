@@ -1,0 +1,13 @@
+
+  create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+  
+   as (
+    select
+  date_trunc('month', date_admission) as admission_month,
+  count(distinct id) as nb_patients
+from hospital_analytics_db.hospital_analytics_schema.patients
+where date_admission is not null
+group by 1
+order by 1
+  );
+

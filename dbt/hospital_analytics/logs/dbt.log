@@ -1,0 +1,1304 @@
+[0m13:18:26.057314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B01E850C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B02D66800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B02D669E0>]}
+
+
+============================== 13:18:26.089983 | e4df53d9-27c6-4347-83c7-b2acf72b2ac9 ==============================
+[0m13:18:26.089983 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:18:26.093057 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:18:26.937584 [info ] [MainThread]: dbt version: 1.10.2
+[0m13:18:26.939636 [info ] [MainThread]: python version: 3.10.11
+[0m13:18:26.942056 [info ] [MainThread]: python path: C:\Users\ayman\desktop\hospital-analytics\dbt\venv\Scripts\python.exe
+[0m13:18:26.944194 [info ] [MainThread]: os info: Windows-10-10.0.26100-SP0
+[0m13:18:36.892899 [info ] [MainThread]: Using profiles dir at C:\Users\ayman\.dbt
+[0m13:18:36.895017 [info ] [MainThread]: Using profiles.yml file at C:\Users\ayman\.dbt\profiles.yml
+[0m13:18:36.900110 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\dbt_project.yml
+[0m13:18:36.923931 [info ] [MainThread]: adapter type: snowflake
+[0m13:18:36.926013 [info ] [MainThread]: adapter version: 1.9.4
+[0m13:18:37.348935 [info ] [MainThread]: Configuration:
+[0m13:18:37.351542 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:18:37.353990 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:18:37.356519 [info ] [MainThread]: Required dependencies:
+[0m13:18:37.359653 [debug] [MainThread]: Executing "git --help"
+[0m13:18:37.511055 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:18:37.514141 [debug] [MainThread]: STDERR: "b''"
+[0m13:18:37.517542 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:18:37.519627 [info ] [MainThread]: Connection:
+[0m13:18:37.522794 [info ] [MainThread]:   account: LKJZRTO-NM04387
+[0m13:18:37.524937 [info ] [MainThread]:   user: Aymane17
+[0m13:18:37.527546 [info ] [MainThread]:   database: HOSPITAL_ANALYTICS_DB
+[0m13:18:37.530005 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m13:18:37.534476 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m13:18:37.536920 [info ] [MainThread]:   schema: hospital_analytics_schema
+[0m13:18:37.539155 [info ] [MainThread]:   authenticator: None
+[0m13:18:37.541242 [info ] [MainThread]:   oauth_client_id: None
+[0m13:18:37.543692 [info ] [MainThread]:   query_tag: None
+[0m13:18:37.546812 [info ] [MainThread]:   client_session_keep_alive: False
+[0m13:18:37.550612 [info ] [MainThread]:   host: None
+[0m13:18:37.553970 [info ] [MainThread]:   port: None
+[0m13:18:37.556485 [info ] [MainThread]:   proxy_host: None
+[0m13:18:37.558960 [info ] [MainThread]:   proxy_port: None
+[0m13:18:37.561150 [info ] [MainThread]:   protocol: None
+[0m13:18:37.567052 [info ] [MainThread]:   connect_retries: 1
+[0m13:18:37.570401 [info ] [MainThread]:   connect_timeout: None
+[0m13:18:37.572411 [info ] [MainThread]:   retry_on_database_errors: False
+[0m13:18:37.574492 [info ] [MainThread]:   retry_all: False
+[0m13:18:37.576954 [info ] [MainThread]:   insecure_mode: False
+[0m13:18:37.580099 [info ] [MainThread]:   reuse_connections: True
+[0m13:18:37.585411 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:18:39.304282 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m13:18:44.208936 [debug] [MainThread]: Using snowflake connection "debug"
+[0m13:18:44.210943 [debug] [MainThread]: On debug: select 1 as id
+[0m13:18:44.214350 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:18:45.671883 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.458 seconds
+[0m13:18:45.675955 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:18:45.679328 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:18:45.684325 [debug] [MainThread]: Command `dbt debug` succeeded at 13:18:45.684325 after 19.95 seconds
+[0m13:18:45.686326 [debug] [MainThread]: Connection 'debug' was left open.
+[0m13:18:45.688326 [debug] [MainThread]: On debug: Close
+[0m13:18:45.791168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B01E850C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B01F4D5A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021B049D60E0>]}
+[0m13:18:45.793169 [debug] [MainThread]: Flushing usage events
+[0m13:18:46.231600 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:26:49.540788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDB311150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDD262800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDD2629E0>]}
+
+
+============================== 13:26:49.616571 | 0dff1e40-f087-4c26-96a3-f01ffb6b9e97 ==============================
+[0m13:26:49.616571 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:26:49.620763 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:00.070987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDA191960>]}
+[0m13:27:00.380406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDD260DF0>]}
+[0m13:27:00.403168 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:27:02.495672 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:27:02.500120 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:27:02.503169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDD202830>]}
+[0m13:27:11.235312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDE204FA0>]}
+[0m13:27:11.563984 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:27:11.601325 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:27:12.331203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDE1DA950>]}
+[0m13:27:12.333268 [info ] [MainThread]: Found 3 models, 476 macros
+[0m13:27:12.335503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDAC41A20>]}
+[0m13:27:12.348421 [info ] [MainThread]: 
+[0m13:27:12.350709 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:27:12.353081 [info ] [MainThread]: 
+[0m13:27:12.356145 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:27:12.361636 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB'
+[0m13:27:20.017529 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB"
+[0m13:27:20.018556 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB"} */
+show terse schemas in database HOSPITAL_ANALYTICS_DB
+    limit 10000
+[0m13:27:20.020591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:21.041906 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.020 seconds
+[0m13:27:21.070433 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema'
+[0m13:27:21.114879 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:27:21.115883 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:27:21.118293 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:27:21.596004 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.478 seconds
+[0m13:27:21.611225 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:27:21.613610 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+show objects in HOSPITAL_ANALYTICS_DB.hospital_analytics_schema
+    limit 10000
+    
+;
+[0m13:27:21.713563 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.098 seconds
+[0m13:27:21.719895 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:27:21.721910 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:27:21.792704 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.069 seconds
+[0m13:27:21.801983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDE3CF760>]}
+[0m13:27:21.912926 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_hospitalization
+[0m13:27:21.915945 [info ] [Thread-1 (]: 1 of 1 START sql view model hospital_analytics_schema.patients_hospitalization . [RUN]
+[0m13:27:21.919190 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hospital_analytics.patients_hospitalization'
+[0m13:27:21.922193 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_hospitalization
+[0m13:27:21.951090 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_hospitalization"
+[0m13:27:21.962008 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_hospitalization
+[0m13:27:22.068614 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_hospitalization"
+[0m13:27:22.078969 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_hospitalization"
+[0m13:27:22.080997 [debug] [Thread-1 (]: On model.hospital_analytics.patients_hospitalization: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_hospitalization"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+  
+   as (
+    select
+  patient_id,
+  first_name,
+  last_name,
+  date_part('year', current_date) - date_part('year', birth_date) as age,
+  admission_date,
+  current_date - admission_date as days_hospitalized
+from hospital_analytics_schema.raw_patients
+where admission_date is not null
+  );
+[0m13:27:22.083029 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:27:23.117103 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd494f-0001-5e03-0000-00014f46f515
+[0m13:27:23.119358 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+[0m13:27:23.128882 [debug] [Thread-1 (]: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:27:23.153794 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0dff1e40-f087-4c26-96a3-f01ffb6b9e97', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDD0408E0>]}
+[0m13:27:23.158191 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model hospital_analytics_schema.patients_hospitalization  [[31mERROR[0m in 1.21s]
+[0m13:27:23.162346 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_hospitalization
+[0m13:27:23.166691 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_hospitalization' to be skipped because of status 'error'.  Reason: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql.
+[0m13:27:23.172126 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:27:23.175252 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB' was left open.
+[0m13:27:23.177258 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB: Close
+[0m13:27:23.295018 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema' was left open.
+[0m13:27:23.297018 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: Close
+[0m13:27:23.402091 [debug] [MainThread]: Connection 'model.hospital_analytics.patients_hospitalization' was left open.
+[0m13:27:23.405133 [debug] [MainThread]: On model.hospital_analytics.patients_hospitalization: Close
+[0m13:27:23.515610 [info ] [MainThread]: 
+[0m13:27:23.517634 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 11.16 seconds (11.16s).
+[0m13:27:23.521660 [debug] [MainThread]: Command end result
+[0m13:27:23.619550 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:27:23.630288 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:27:23.657079 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\run_results.json
+[0m13:27:23.660742 [info ] [MainThread]: 
+[0m13:27:23.663055 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:27:23.666196 [info ] [MainThread]: 
+[0m13:27:23.668266 [error] [MainThread]: [31mFailure in model patients_hospitalization (models\patients_hospitalization.sql)[0m
+[0m13:27:23.670302 [error] [MainThread]:   Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:27:23.672312 [info ] [MainThread]: 
+[0m13:27:23.677484 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_hospitalization.sql
+[0m13:27:23.680488 [info ] [MainThread]: 
+[0m13:27:23.682487 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:27:23.686488 [debug] [MainThread]: Command `dbt run` failed at 13:27:23.686488 after 34.51 seconds
+[0m13:27:23.688488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDB311150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDB3E6DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022DDE3C48B0>]}
+[0m13:27:23.694245 [debug] [MainThread]: Flushing usage events
+[0m13:27:24.156182 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:35:53.479088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD2F69D090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD3167FC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD3167FEB0>]}
+
+
+============================== 13:35:53.491266 | f0c12c9c-e601-4d22-8619-770c414d23f7 ==============================
+[0m13:35:53.491266 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:35:53.494632 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:35:55.344949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD2F710B20>]}
+[0m13:35:55.586675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD2FE6A470>]}
+[0m13:35:55.592210 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:35:57.238703 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:35:57.904061 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 2 files changed.
+[0m13:35:57.907110 [debug] [MainThread]: Partial parsing: added file: hospital_analytics://models\schema.yml
+[0m13:35:57.909141 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_demographics.sql
+[0m13:35:57.911231 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_admission_by_month.sql
+[0m13:35:59.663781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD329E5930>]}
+[0m13:36:00.035616 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:36:00.046204 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:36:00.241363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD329E4760>]}
+[0m13:36:00.244906 [info ] [MainThread]: Found 3 models, 9 data tests, 476 macros
+[0m13:36:00.246917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD329E5930>]}
+[0m13:36:00.256393 [info ] [MainThread]: 
+[0m13:36:00.258663 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:36:00.260677 [info ] [MainThread]: 
+[0m13:36:00.262699 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:36:00.288225 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema'
+[0m13:36:00.793348 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:36:00.795349 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:36:00.796348 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:36:01.529598 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.733 seconds
+[0m13:36:01.544487 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:36:01.546676 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+show objects in HOSPITAL_ANALYTICS_DB.hospital_analytics_schema
+    limit 10000
+    
+;
+[0m13:36:01.659723 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.112 seconds
+[0m13:36:01.667117 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:36:01.669434 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:36:01.742440 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.070 seconds
+[0m13:36:01.750794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f0c12c9c-e601-4d22-8619-770c414d23f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD329E4760>]}
+[0m13:36:01.766217 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745
+[0m13:36:01.769293 [info ] [Thread-1 (]: 1 of 9 START test not_null_patients_admission_by_month_admission_month ......... [RUN]
+[0m13:36:01.773336 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745'
+[0m13:36:01.775692 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745
+[0m13:36:01.841147 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745"
+[0m13:36:01.846365 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745
+[0m13:36:01.939439 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745"
+[0m13:36:01.945865 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745"
+[0m13:36:01.947901 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select admission_month
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+where admission_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:01.949936 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:36:02.452211 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5e03-0000-00014f46f559
+[0m13:36:02.455026 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+[0m13:36:02.463118 [debug] [Thread-1 (]: Database Error in test not_null_patients_admission_by_month_admission_month (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_admission_month.sql
+[0m13:36:02.465135 [error] [Thread-1 (]: 1 of 9 ERROR not_null_patients_admission_by_month_admission_month .............. [[31mERROR[0m in 0.69s]
+[0m13:36:02.469464 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745
+[0m13:36:02.473818 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7
+[0m13:36:02.474816 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_admission_by_month_admission_month (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_admission_month.sql.
+[0m13:36:02.477198 [info ] [Thread-1 (]: 2 of 9 START test not_null_patients_admission_by_month_nb_patients ............. [RUN]
+[0m13:36:02.481297 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_admission_by_month_admission_month.fd2c625745, now test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7)
+[0m13:36:02.483311 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7
+[0m13:36:02.509217 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7"
+[0m13:36:02.512217 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7
+[0m13:36:02.525029 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7"
+[0m13:36:02.530070 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7"
+[0m13:36:02.532597 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nb_patients
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+where nb_patients is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:02.623516 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5ec6-0001-4f4600015422
+[0m13:36:02.624900 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+[0m13:36:02.631941 [debug] [Thread-1 (]: Database Error in test not_null_patients_admission_by_month_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_nb_patients.sql
+[0m13:36:02.635467 [error] [Thread-1 (]: 2 of 9 ERROR not_null_patients_admission_by_month_nb_patients .................. [[31mERROR[0m in 0.15s]
+[0m13:36:02.640833 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7
+[0m13:36:02.642850 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86
+[0m13:36:02.644985 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_admission_by_month_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_nb_patients.sql.
+[0m13:36:02.647046 [info ] [Thread-1 (]: 3 of 9 START test not_null_patients_demographics_gender ........................ [RUN]
+[0m13:36:02.649317 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_admission_by_month_nb_patients.9a35858be7, now test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86)
+[0m13:36:02.653640 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86
+[0m13:36:02.671540 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86"
+[0m13:36:02.675535 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86
+[0m13:36:02.688690 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86"
+[0m13:36:02.694759 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86"
+[0m13:36:02.696773 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select gender
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_demographics
+where gender is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:02.776368 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5e03-0000-00014f46f55d
+[0m13:36:02.778873 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+[0m13:36:02.788549 [debug] [Thread-1 (]: Database Error in test not_null_patients_demographics_gender (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_gender.sql
+[0m13:36:02.791916 [error] [Thread-1 (]: 3 of 9 ERROR not_null_patients_demographics_gender ............................. [[31mERROR[0m in 0.14s]
+[0m13:36:02.794981 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86
+[0m13:36:02.796495 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23
+[0m13:36:02.798980 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_demographics_gender (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_gender.sql.
+[0m13:36:02.803503 [info ] [Thread-1 (]: 4 of 9 START test not_null_patients_demographics_nb_patients ................... [RUN]
+[0m13:36:02.806896 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_demographics_gender.bc257fda86, now test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23)
+[0m13:36:02.808958 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23
+[0m13:36:02.825317 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23"
+[0m13:36:02.836457 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23
+[0m13:36:02.847921 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23"
+[0m13:36:02.855488 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23"
+[0m13:36:02.858489 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select nb_patients
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_demographics
+where nb_patients is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:02.925653 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5ec6-0001-4f4600015426
+[0m13:36:02.927683 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+[0m13:36:02.935883 [debug] [Thread-1 (]: Database Error in test not_null_patients_demographics_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_nb_patients.sql
+[0m13:36:02.939308 [error] [Thread-1 (]: 4 of 9 ERROR not_null_patients_demographics_nb_patients ........................ [[31mERROR[0m in 0.13s]
+[0m13:36:02.943490 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23
+[0m13:36:02.945789 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52
+[0m13:36:02.947849 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_demographics_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_nb_patients.sql.
+[0m13:36:02.948866 [info ] [Thread-1 (]: 5 of 9 START test not_null_patients_hospitalization_admission_date ............. [RUN]
+[0m13:36:02.955415 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_demographics_nb_patients.2ead205d23, now test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52)
+[0m13:36:02.957500 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52
+[0m13:36:02.980074 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52"
+[0m13:36:02.984573 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52
+[0m13:36:02.996698 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52"
+[0m13:36:03.005192 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52"
+[0m13:36:03.007225 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select admission_date
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+where admission_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:03.082785 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5e03-0000-00014f46f561
+[0m13:36:03.086153 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+[0m13:36:03.093651 [debug] [Thread-1 (]: Database Error in test not_null_patients_hospitalization_admission_date (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_admission_date.sql
+[0m13:36:03.095683 [error] [Thread-1 (]: 5 of 9 ERROR not_null_patients_hospitalization_admission_date .................. [[31mERROR[0m in 0.14s]
+[0m13:36:03.099740 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52
+[0m13:36:03.104065 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89
+[0m13:36:03.107126 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_hospitalization_admission_date (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_admission_date.sql.
+[0m13:36:03.108124 [info ] [Thread-1 (]: 6 of 9 START test not_null_patients_hospitalization_first_name ................. [RUN]
+[0m13:36:03.111551 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_hospitalization_admission_date.62df4fea52, now test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89)
+[0m13:36:03.113578 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89
+[0m13:36:03.131310 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89"
+[0m13:36:03.135367 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89
+[0m13:36:03.148047 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89"
+[0m13:36:03.155427 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89"
+[0m13:36:03.157428 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select first_name
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+where first_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:03.225166 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5ec6-0001-4f460001542a
+[0m13:36:03.227168 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+[0m13:36:03.234662 [debug] [Thread-1 (]: Database Error in test not_null_patients_hospitalization_first_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_first_name.sql
+[0m13:36:03.237704 [error] [Thread-1 (]: 6 of 9 ERROR not_null_patients_hospitalization_first_name ...................... [[31mERROR[0m in 0.13s]
+[0m13:36:03.241042 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89
+[0m13:36:03.243287 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528
+[0m13:36:03.245308 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_hospitalization_first_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_first_name.sql.
+[0m13:36:03.247696 [info ] [Thread-1 (]: 7 of 9 START test not_null_patients_hospitalization_last_name .................. [RUN]
+[0m13:36:03.251027 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_hospitalization_first_name.ac624e5b89, now test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528)
+[0m13:36:03.255318 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528
+[0m13:36:03.272787 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528"
+[0m13:36:03.276789 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528
+[0m13:36:03.289483 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528"
+[0m13:36:03.296208 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528"
+[0m13:36:03.297214 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select last_name
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+where last_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:03.389143 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5e03-0000-00014f46f565
+[0m13:36:03.391415 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+[0m13:36:03.397469 [debug] [Thread-1 (]: Database Error in test not_null_patients_hospitalization_last_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_last_name.sql
+[0m13:36:03.400275 [error] [Thread-1 (]: 7 of 9 ERROR not_null_patients_hospitalization_last_name ....................... [[31mERROR[0m in 0.15s]
+[0m13:36:03.406111 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528
+[0m13:36:03.407276 [debug] [Thread-1 (]: Began running node test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210
+[0m13:36:03.409946 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_hospitalization_last_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_last_name.sql.
+[0m13:36:03.410948 [info ] [Thread-1 (]: 8 of 9 START test not_null_patients_hospitalization_patient_id ................. [RUN]
+[0m13:36:03.414700 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_hospitalization_last_name.4dac2c8528, now test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210)
+[0m13:36:03.417022 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210
+[0m13:36:03.438208 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210"
+[0m13:36:03.441246 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210
+[0m13:36:03.456758 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210"
+[0m13:36:03.461146 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210"
+[0m13:36:03.463497 [debug] [Thread-1 (]: On test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select patient_id
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+where patient_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:03.537002 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5ec6-0001-4f460001542e
+[0m13:36:03.540064 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+[0m13:36:03.546324 [debug] [Thread-1 (]: Database Error in test not_null_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_patient_id.sql
+[0m13:36:03.549344 [error] [Thread-1 (]: 8 of 9 ERROR not_null_patients_hospitalization_patient_id ...................... [[31mERROR[0m in 0.13s]
+[0m13:36:03.554008 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210
+[0m13:36:03.556502 [debug] [Thread-1 (]: Began running node test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5
+[0m13:36:03.558514 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210' to be skipped because of status 'error'.  Reason: Database Error in test not_null_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_patient_id.sql.
+[0m13:36:03.560531 [info ] [Thread-1 (]: 9 of 9 START test unique_patients_hospitalization_patient_id ................... [RUN]
+[0m13:36:03.563794 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.hospital_analytics.not_null_patients_hospitalization_patient_id.43b34ad210, now test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5)
+[0m13:36:03.565883 [debug] [Thread-1 (]: Began compiling node test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5
+[0m13:36:03.594536 [debug] [Thread-1 (]: Writing injected SQL for node "test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5"
+[0m13:36:03.599564 [debug] [Thread-1 (]: Began executing node test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5
+[0m13:36:03.613095 [debug] [Thread-1 (]: Writing runtime sql for node "test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5"
+[0m13:36:03.621098 [debug] [Thread-1 (]: Using snowflake connection "test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5"
+[0m13:36:03.623531 [debug] [Thread-1 (]: On test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    patient_id as unique_field,
+    count(*) as n_records
+
+from HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+where patient_id is not null
+group by patient_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m13:36:03.730448 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4958-0001-5e03-0000-00014f46f569
+[0m13:36:03.733451 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+[0m13:36:03.745449 [debug] [Thread-1 (]: Database Error in test unique_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\unique_patients_hospitalization_patient_id.sql
+[0m13:36:03.749454 [error] [Thread-1 (]: 9 of 9 ERROR unique_patients_hospitalization_patient_id ........................ [[31mERROR[0m in 0.19s]
+[0m13:36:03.756455 [debug] [Thread-1 (]: Finished running node test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5
+[0m13:36:03.758869 [debug] [Thread-4 (]: Marking all children of 'test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5' to be skipped because of status 'error'.  Reason: Database Error in test unique_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\unique_patients_hospitalization_patient_id.sql.
+[0m13:36:03.763373 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:36:03.765372 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema' was left open.
+[0m13:36:03.768431 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: Close
+[0m13:36:03.885480 [debug] [MainThread]: Connection 'test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5' was left open.
+[0m13:36:03.889554 [debug] [MainThread]: On test.hospital_analytics.unique_patients_hospitalization_patient_id.1ac4ae34b5: Close
+[0m13:36:03.996126 [info ] [MainThread]: 
+[0m13:36:03.999163 [info ] [MainThread]: Finished running 9 data tests in 0 hours 0 minutes and 3.73 seconds (3.73s).
+[0m13:36:04.009596 [debug] [MainThread]: Command end result
+[0m13:36:04.128845 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:36:04.142794 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:36:04.177276 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\run_results.json
+[0m13:36:04.179571 [info ] [MainThread]: 
+[0m13:36:04.180571 [info ] [MainThread]: [31mCompleted with 9 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:36:04.186174 [info ] [MainThread]: 
+[0m13:36:04.189778 [error] [MainThread]: [31mFailure in test not_null_patients_admission_by_month_admission_month (models\schema.yml)[0m
+[0m13:36:04.193078 [error] [MainThread]:   Database Error in test not_null_patients_admission_by_month_admission_month (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_admission_month.sql
+[0m13:36:04.195114 [info ] [MainThread]: 
+[0m13:36:04.197173 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_admission_month.sql
+[0m13:36:04.199257 [info ] [MainThread]: 
+[0m13:36:04.204455 [error] [MainThread]: [31mFailure in test not_null_patients_admission_by_month_nb_patients (models\schema.yml)[0m
+[0m13:36:04.207950 [error] [MainThread]:   Database Error in test not_null_patients_admission_by_month_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_ADMISSION_BY_MONTH » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_nb_patients.sql
+[0m13:36:04.209993 [info ] [MainThread]: 
+[0m13:36:04.212007 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_admission_by_month_nb_patients.sql
+[0m13:36:04.214035 [info ] [MainThread]: 
+[0m13:36:04.217144 [error] [MainThread]: [31mFailure in test not_null_patients_demographics_gender (models\schema.yml)[0m
+[0m13:36:04.223221 [error] [MainThread]:   Database Error in test not_null_patients_demographics_gender (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_gender.sql
+[0m13:36:04.225601 [info ] [MainThread]: 
+[0m13:36:04.227631 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_demographics_gender.sql
+[0m13:36:04.229669 [info ] [MainThread]: 
+[0m13:36:04.231722 [error] [MainThread]: [31mFailure in test not_null_patients_demographics_nb_patients (models\schema.yml)[0m
+[0m13:36:04.239846 [error] [MainThread]:   Database Error in test not_null_patients_demographics_nb_patients (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_DEMOGRAPHICS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_demographics_nb_patients.sql
+[0m13:36:04.242039 [info ] [MainThread]: 
+[0m13:36:04.244323 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_demographics_nb_patients.sql
+[0m13:36:04.246448 [info ] [MainThread]: 
+[0m13:36:04.248473 [error] [MainThread]: [31mFailure in test not_null_patients_hospitalization_admission_date (models\schema.yml)[0m
+[0m13:36:04.254822 [error] [MainThread]:   Database Error in test not_null_patients_hospitalization_admission_date (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_admission_date.sql
+[0m13:36:04.258190 [info ] [MainThread]: 
+[0m13:36:04.261583 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_admission_date.sql
+[0m13:36:04.263022 [info ] [MainThread]: 
+[0m13:36:04.265053 [error] [MainThread]: [31mFailure in test not_null_patients_hospitalization_first_name (models\schema.yml)[0m
+[0m13:36:04.272232 [error] [MainThread]:   Database Error in test not_null_patients_hospitalization_first_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_first_name.sql
+[0m13:36:04.275266 [info ] [MainThread]: 
+[0m13:36:04.277287 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_first_name.sql
+[0m13:36:04.279477 [info ] [MainThread]: 
+[0m13:36:04.281509 [error] [MainThread]: [31mFailure in test not_null_patients_hospitalization_last_name (models\schema.yml)[0m
+[0m13:36:04.287676 [error] [MainThread]:   Database Error in test not_null_patients_hospitalization_last_name (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_last_name.sql
+[0m13:36:04.290927 [info ] [MainThread]: 
+[0m13:36:04.292957 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_last_name.sql
+[0m13:36:04.295022 [info ] [MainThread]: 
+[0m13:36:04.297052 [error] [MainThread]: [31mFailure in test not_null_patients_hospitalization_patient_id (models\schema.yml)[0m
+[0m13:36:04.299116 [error] [MainThread]:   Database Error in test not_null_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_patient_id.sql
+[0m13:36:04.306551 [info ] [MainThread]: 
+[0m13:36:04.308597 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\not_null_patients_hospitalization_patient_id.sql
+[0m13:36:04.310813 [info ] [MainThread]: 
+[0m13:36:04.313837 [error] [MainThread]: [31mFailure in test unique_patients_hospitalization_patient_id (models\schema.yml)[0m
+[0m13:36:04.321221 [error] [MainThread]:   Database Error in test unique_patients_hospitalization_patient_id (models\schema.yml)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.PATIENTS_HOSPITALIZATION » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\schema.yml\unique_patients_hospitalization_patient_id.sql
+[0m13:36:04.324533 [info ] [MainThread]: 
+[0m13:36:04.326563 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\schema.yml\unique_patients_hospitalization_patient_id.sql
+[0m13:36:04.329690 [info ] [MainThread]: 
+[0m13:36:04.332048 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=9 SKIP=0 NO-OP=0 TOTAL=9
+[0m13:36:04.340123 [debug] [MainThread]: Command `dbt test` failed at 13:36:04.339123 after 11.17 seconds
+[0m13:36:04.342123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD2F69D090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD2F4DE950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DD340C4B20>]}
+[0m13:36:04.344122 [debug] [MainThread]: Flushing usage events
+[0m13:36:04.765499 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:43:23.813773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021766DC5120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021767CA2830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021767CA2A10>]}
+
+
+============================== 13:43:23.829752 | 7b818e30-d2b7-4bdc-a44b-135b4bf51d77 ==============================
+[0m13:43:23.829752 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:43:23.863270 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:43:25.949744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176982F0A0>]}
+[0m13:43:26.216325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021767CA0E20>]}
+[0m13:43:26.220363 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:43:27.975339 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:43:29.054336 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:43:29.058756 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\schema.yml
+[0m13:43:30.985605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176B0E8670>]}
+[0m13:43:31.435466 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:43:31.451949 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:43:31.582205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021769D88F10>]}
+[0m13:43:31.585656 [info ] [MainThread]: Found 3 models, 5 data tests, 476 macros
+[0m13:43:31.595692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021769DA1150>]}
+[0m13:43:31.607523 [info ] [MainThread]: 
+[0m13:43:31.611923 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:43:31.616639 [info ] [MainThread]: 
+[0m13:43:31.620446 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:43:31.659322 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB'
+[0m13:43:32.032624 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB"
+[0m13:43:32.034626 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB"} */
+show terse schemas in database HOSPITAL_ANALYTICS_DB
+    limit 10000
+[0m13:43:32.036626 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:43:33.303392 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.267 seconds
+[0m13:43:33.312999 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema'
+[0m13:43:33.362649 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:43:33.363653 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:43:33.365661 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:43:33.816230 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.451 seconds
+[0m13:43:33.849305 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:43:33.852560 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+show objects in HOSPITAL_ANALYTICS_DB.hospital_analytics_schema
+    limit 10000
+    
+;
+[0m13:43:33.946837 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.091 seconds
+[0m13:43:33.954113 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:43:33.957487 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:43:34.031997 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.072 seconds
+[0m13:43:34.043962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021763CDBA90>]}
+[0m13:43:34.064045 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_admission_by_month
+[0m13:43:34.067135 [info ] [Thread-1 (]: 1 of 3 START sql view model hospital_analytics_schema.patients_admission_by_month  [RUN]
+[0m13:43:34.074510 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hospital_analytics.patients_admission_by_month'
+[0m13:43:34.077729 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_admission_by_month
+[0m13:43:34.118303 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:43:34.124915 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_admission_by_month
+[0m13:43:34.281209 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:43:34.290150 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_admission_by_month"
+[0m13:43:34.293654 [debug] [Thread-1 (]: On model.hospital_analytics.patients_admission_by_month: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_admission_by_month"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+  
+   as (
+    select
+  date_trunc('month', admission_date) as admission_month,
+  count(distinct patient_id) as nb_patients
+from hospital_analytics_schema.raw_patients
+group by 1
+order by 1
+  );
+[0m13:43:34.295752 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:43:34.658477 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd495f-0001-5ec6-0001-4f4600015492
+[0m13:43:34.665347 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+[0m13:43:34.675796 [debug] [Thread-1 (]: Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:43:34.683410 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021769DBC490>]}
+[0m13:43:34.686425 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model hospital_analytics_schema.patients_admission_by_month  [[31mERROR[0m in 0.61s]
+[0m13:43:34.691670 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_admission_by_month
+[0m13:43:34.694723 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_demographics
+[0m13:43:34.696735 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_admission_by_month' to be skipped because of status 'error'.  Reason: Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql.
+[0m13:43:34.698834 [info ] [Thread-1 (]: 2 of 3 START sql view model hospital_analytics_schema.patients_demographics .... [RUN]
+[0m13:43:34.703135 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_admission_by_month, now model.hospital_analytics.patients_demographics)
+[0m13:43:34.708788 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_demographics
+[0m13:43:34.717789 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_demographics"
+[0m13:43:34.724218 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_demographics
+[0m13:43:34.736701 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_demographics"
+[0m13:43:34.744704 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_demographics"
+[0m13:43:34.746705 [debug] [Thread-1 (]: On model.hospital_analytics.patients_demographics: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_demographics"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_demographics
+  
+   as (
+    select
+  gender,
+  case
+    when age between 0 and 17 then '0-17'
+    when age between 18 and 35 then '18-35'
+    when age between 36 and 60 then '36-60'
+    else '60+'
+  end as age_group,
+  count(*) as nb_patients
+from (
+  select
+    patient_id,
+    gender,
+    date_part('year', current_date) - date_part('year', birth_date) as age
+  from hospital_analytics_schema.raw_patients
+) t
+group by 1, 2
+order by 1, 2
+  );
+[0m13:43:34.831193 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd495f-0001-5e03-0000-00014f46f5c5
+[0m13:43:34.833201 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+[0m13:43:34.842323 [debug] [Thread-1 (]: Database Error in model patients_demographics (models\patients_demographics.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql
+[0m13:43:34.844866 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021766B92BC0>]}
+[0m13:43:34.848121 [error] [Thread-1 (]: 2 of 3 ERROR creating sql view model hospital_analytics_schema.patients_demographics  [[31mERROR[0m in 0.14s]
+[0m13:43:34.851574 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_demographics
+[0m13:43:34.853610 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_hospitalization
+[0m13:43:34.856653 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_demographics' to be skipped because of status 'error'.  Reason: Database Error in model patients_demographics (models\patients_demographics.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql.
+[0m13:43:34.859862 [info ] [Thread-1 (]: 3 of 3 START sql view model hospital_analytics_schema.patients_hospitalization . [RUN]
+[0m13:43:34.864251 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_demographics, now model.hospital_analytics.patients_hospitalization)
+[0m13:43:34.866262 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_hospitalization
+[0m13:43:34.877902 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_hospitalization"
+[0m13:43:34.881897 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_hospitalization
+[0m13:43:34.899727 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_hospitalization"
+[0m13:43:34.906954 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_hospitalization"
+[0m13:43:34.910166 [debug] [Thread-1 (]: On model.hospital_analytics.patients_hospitalization: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_hospitalization"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+  
+   as (
+    select
+  patient_id,
+  first_name,
+  last_name,
+  date_part('year', current_date) - date_part('year', birth_date) as age,
+  admission_date,
+  current_date - admission_date as days_hospitalized
+from hospital_analytics_schema.raw_patients
+where admission_date is not null
+  );
+[0m13:43:34.984414 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd495f-0001-5ec6-0001-4f4600015496
+[0m13:43:34.986649 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002003 (42S02): Erreur de compilation SQL :
+Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+[0m13:43:34.996241 [debug] [Thread-1 (]: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:43:34.999417 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7b818e30-d2b7-4bdc-a44b-135b4bf51d77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021766B92BC0>]}
+[0m13:43:35.002617 [error] [Thread-1 (]: 3 of 3 ERROR creating sql view model hospital_analytics_schema.patients_hospitalization  [[31mERROR[0m in 0.14s]
+[0m13:43:35.008046 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_hospitalization
+[0m13:43:35.010450 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_hospitalization' to be skipped because of status 'error'.  Reason: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql.
+[0m13:43:35.014381 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:43:35.016404 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB' was left open.
+[0m13:43:35.018404 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB: Close
+[0m13:43:35.103861 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema' was left open.
+[0m13:43:35.107000 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: Close
+[0m13:43:35.208983 [debug] [MainThread]: Connection 'model.hospital_analytics.patients_hospitalization' was left open.
+[0m13:43:35.210996 [debug] [MainThread]: On model.hospital_analytics.patients_hospitalization: Close
+[0m13:43:35.298980 [info ] [MainThread]: 
+[0m13:43:35.301982 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 3.68 seconds (3.68s).
+[0m13:43:35.310452 [debug] [MainThread]: Command end result
+[0m13:43:35.421857 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:43:35.431350 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:43:35.462033 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\run_results.json
+[0m13:43:35.464454 [info ] [MainThread]: 
+[0m13:43:35.468643 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:43:35.471040 [info ] [MainThread]: 
+[0m13:43:35.477438 [error] [MainThread]: [31mFailure in model patients_admission_by_month (models\patients_admission_by_month.sql)[0m
+[0m13:43:35.480863 [error] [MainThread]:   Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:43:35.482896 [info ] [MainThread]: 
+[0m13:43:35.486551 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:43:35.492573 [info ] [MainThread]: 
+[0m13:43:35.496565 [error] [MainThread]: [31mFailure in model patients_demographics (models\patients_demographics.sql)[0m
+[0m13:43:35.498895 [error] [MainThread]:   Database Error in model patients_demographics (models\patients_demographics.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql
+[0m13:43:35.503465 [info ] [MainThread]: 
+[0m13:43:35.510457 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_demographics.sql
+[0m13:43:35.512496 [info ] [MainThread]: 
+[0m13:43:35.515806 [error] [MainThread]: [31mFailure in model patients_hospitalization (models\patients_hospitalization.sql)[0m
+[0m13:43:35.519941 [error] [MainThread]:   Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  002003 (42S02): Erreur de compilation SQL :
+  Object« HOSPITAL_ANALYTICS_DB.HOSPITAL_ANALYTICS_SCHEMA.RAW_PATIENTS » n'existe pas ou n'est pas autorisé.
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:43:35.526937 [info ] [MainThread]: 
+[0m13:43:35.529228 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_hospitalization.sql
+[0m13:43:35.532263 [info ] [MainThread]: 
+[0m13:43:35.535319 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:43:35.545977 [debug] [MainThread]: Command `dbt run` failed at 13:43:35.545977 after 12.05 seconds
+[0m13:43:35.549282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021766DC5120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176672C9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002176B10BC40>]}
+[0m13:43:35.551368 [debug] [MainThread]: Flushing usage events
+[0m13:43:35.976132 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:44:48.158194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EB589090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185ED462800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185ED4629E0>]}
+
+
+============================== 13:44:48.171448 | 8b27d0bd-25e4-4879-b3ea-8456300d91e2 ==============================
+[0m13:44:48.171448 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:44:48.175851 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:50.140335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EDEEE680>]}
+[0m13:44:50.384682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EBDAB0A0>]}
+[0m13:44:50.388998 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:44:52.116856 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:44:52.860575 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m13:44:52.866445 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_admission_by_month.sql
+[0m13:44:52.868482 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_hospitalization.sql
+[0m13:44:52.870517 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_demographics.sql
+[0m13:44:54.520116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EE7F0610>]}
+[0m13:44:54.872090 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:44:54.881695 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:44:54.955496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EE4857E0>]}
+[0m13:44:54.957584 [info ] [MainThread]: Found 3 models, 5 data tests, 476 macros
+[0m13:44:54.961036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EE485E70>]}
+[0m13:44:54.968658 [info ] [MainThread]: 
+[0m13:44:54.970668 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:44:54.971681 [info ] [MainThread]: 
+[0m13:44:54.974710 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:44:55.001743 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB'
+[0m13:44:55.335454 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB"
+[0m13:44:55.337484 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB"} */
+show terse schemas in database HOSPITAL_ANALYTICS_DB
+    limit 10000
+[0m13:44:55.338924 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:56.195787 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.857 seconds
+[0m13:44:56.204073 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema'
+[0m13:44:56.246937 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:44:56.248387 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:44:56.250787 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:56.557070 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.306 seconds
+[0m13:44:56.571139 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:44:56.573582 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+show objects in HOSPITAL_ANALYTICS_DB.hospital_analytics_schema
+    limit 10000
+    
+;
+[0m13:44:56.666038 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.091 seconds
+[0m13:44:56.672121 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:44:56.674129 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:44:56.743199 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m13:44:56.753525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E9E2E920>]}
+[0m13:44:56.767438 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_admission_by_month
+[0m13:44:56.770451 [info ] [Thread-1 (]: 1 of 3 START sql view model hospital_analytics_schema.patients_admission_by_month  [RUN]
+[0m13:44:56.773862 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hospital_analytics.patients_admission_by_month'
+[0m13:44:56.775862 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_admission_by_month
+[0m13:44:56.807811 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:44:56.812132 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_admission_by_month
+[0m13:44:56.915233 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:44:56.921122 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_admission_by_month"
+[0m13:44:56.922137 [debug] [Thread-1 (]: On model.hospital_analytics.patients_admission_by_month: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_admission_by_month"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+  
+   as (
+    select
+  date_trunc('month', admission_date) as admission_month,
+  count(distinct patient_id) as nb_patients
+from hospital_analytics_schema.patients
+group by 1
+order by 1
+  );
+[0m13:44:56.924628 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:44:57.282097 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4960-0001-5ec6-0001-4f46000154a6
+[0m13:44:57.285216 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 22
+ identificateur non valide « ADMISSION_DATE »
+[0m13:44:57.292256 [debug] [Thread-1 (]: Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 22
+   identificateur non valide « ADMISSION_DATE »
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:44:57.301982 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185ED400BE0>]}
+[0m13:44:57.303993 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model hospital_analytics_schema.patients_admission_by_month  [[31mERROR[0m in 0.52s]
+[0m13:44:57.308210 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_admission_by_month
+[0m13:44:57.312414 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_demographics
+[0m13:44:57.315675 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_admission_by_month' to be skipped because of status 'error'.  Reason: Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 22
+   identificateur non valide « ADMISSION_DATE »
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql.
+[0m13:44:57.317703 [info ] [Thread-1 (]: 2 of 3 START sql view model hospital_analytics_schema.patients_demographics .... [RUN]
+[0m13:44:57.322184 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_admission_by_month, now model.hospital_analytics.patients_demographics)
+[0m13:44:57.324202 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_demographics
+[0m13:44:57.336130 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_demographics"
+[0m13:44:57.340131 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_demographics
+[0m13:44:57.354132 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_demographics"
+[0m13:44:57.361343 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_demographics"
+[0m13:44:57.363367 [debug] [Thread-1 (]: On model.hospital_analytics.patients_demographics: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_demographics"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_demographics
+  
+   as (
+    select
+  gender,
+  case
+    when age between 0 and 17 then '0-17'
+    when age between 18 and 35 then '18-35'
+    when age between 36 and 60 then '36-60'
+    else '60+'
+  end as age_group,
+  count(*) as nb_patients
+from (
+  select
+    patient_id,
+    gender,
+    date_part('year', current_date) - date_part('year', birth_date) as age
+  from hospital_analytics_schema.patients
+) t
+group by 1, 2
+order by 1, 2
+  );
+[0m13:44:57.457217 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4960-0001-5e03-0000-00014f46f5cd
+[0m13:44:57.459540 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): Erreur de compilation SQL : ligne d'erreur 15 à la position 4
+ identificateur non valide « PATIENT_ID »
+[0m13:44:57.467059 [debug] [Thread-1 (]: Database Error in model patients_demographics (models\patients_demographics.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 15 à la position 4
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql
+[0m13:44:57.469067 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EB3CE950>]}
+[0m13:44:57.472333 [error] [Thread-1 (]: 2 of 3 ERROR creating sql view model hospital_analytics_schema.patients_demographics  [[31mERROR[0m in 0.15s]
+[0m13:44:57.475376 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_demographics
+[0m13:44:57.480000 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_hospitalization
+[0m13:44:57.482015 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_demographics' to be skipped because of status 'error'.  Reason: Database Error in model patients_demographics (models\patients_demographics.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 15 à la position 4
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql.
+[0m13:44:57.484037 [info ] [Thread-1 (]: 3 of 3 START sql view model hospital_analytics_schema.patients_hospitalization . [RUN]
+[0m13:44:57.488558 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_demographics, now model.hospital_analytics.patients_hospitalization)
+[0m13:44:57.489577 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_hospitalization
+[0m13:44:57.499632 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_hospitalization"
+[0m13:44:57.504168 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_hospitalization
+[0m13:44:57.522153 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_hospitalization"
+[0m13:44:57.527815 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_hospitalization"
+[0m13:44:57.531317 [debug] [Thread-1 (]: On model.hospital_analytics.patients_hospitalization: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_hospitalization"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+  
+   as (
+    select
+  patient_id,
+  first_name,
+  last_name,
+  date_part('year', current_date) - date_part('year', birth_date) as age,
+  admission_date,
+  current_date - admission_date as days_hospitalized
+from hospital_analytics_schema.patients
+where admission_date is not null
+  );
+[0m13:44:57.604648 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bd4960-0001-5ec6-0001-4f46000154aa
+[0m13:44:57.606847 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 2
+ identificateur non valide « PATIENT_ID »
+[0m13:44:57.615520 [debug] [Thread-1 (]: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 2
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:44:57.617811 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8b27d0bd-25e4-4879-b3ea-8456300d91e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EEE88280>]}
+[0m13:44:57.620836 [error] [Thread-1 (]: 3 of 3 ERROR creating sql view model hospital_analytics_schema.patients_hospitalization  [[31mERROR[0m in 0.13s]
+[0m13:44:57.624555 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_hospitalization
+[0m13:44:57.630203 [debug] [Thread-4 (]: Marking all children of 'model.hospital_analytics.patients_hospitalization' to be skipped because of status 'error'.  Reason: Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 2
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql.
+[0m13:44:57.634693 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:44:57.635698 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB' was left open.
+[0m13:44:57.638009 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB: Close
+[0m13:44:57.755007 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema' was left open.
+[0m13:44:57.757025 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: Close
+[0m13:44:57.841632 [debug] [MainThread]: Connection 'model.hospital_analytics.patients_hospitalization' was left open.
+[0m13:44:57.846571 [debug] [MainThread]: On model.hospital_analytics.patients_hospitalization: Close
+[0m13:44:57.934436 [info ] [MainThread]: 
+[0m13:44:57.936742 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 2.96 seconds (2.96s).
+[0m13:44:57.942011 [debug] [MainThread]: Command end result
+[0m13:44:58.038104 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:44:58.049012 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:44:58.075282 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\run_results.json
+[0m13:44:58.078068 [info ] [MainThread]: 
+[0m13:44:58.081097 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:44:58.084099 [info ] [MainThread]: 
+[0m13:44:58.086477 [error] [MainThread]: [31mFailure in model patients_admission_by_month (models\patients_admission_by_month.sql)[0m
+[0m13:44:58.088005 [error] [MainThread]:   Database Error in model patients_admission_by_month (models\patients_admission_by_month.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 22
+   identificateur non valide « ADMISSION_DATE »
+  compiled code at target\run\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:44:58.090757 [info ] [MainThread]: 
+[0m13:44:58.096986 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_admission_by_month.sql
+[0m13:44:58.100475 [info ] [MainThread]: 
+[0m13:44:58.103002 [error] [MainThread]: [31mFailure in model patients_demographics (models\patients_demographics.sql)[0m
+[0m13:44:58.105335 [error] [MainThread]:   Database Error in model patients_demographics (models\patients_demographics.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 15 à la position 4
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_demographics.sql
+[0m13:44:58.107741 [info ] [MainThread]: 
+[0m13:44:58.111230 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_demographics.sql
+[0m13:44:58.114374 [info ] [MainThread]: 
+[0m13:44:58.117448 [error] [MainThread]: [31mFailure in model patients_hospitalization (models\patients_hospitalization.sql)[0m
+[0m13:44:58.120035 [error] [MainThread]:   Database Error in model patients_hospitalization (models\patients_hospitalization.sql)
+  000904 (42000): Erreur de compilation SQL : ligne d'erreur 5 à la position 2
+   identificateur non valide « PATIENT_ID »
+  compiled code at target\run\hospital_analytics\models\patients_hospitalization.sql
+[0m13:44:58.122234 [info ] [MainThread]: 
+[0m13:44:58.123735 [info ] [MainThread]:   compiled code at target\compiled\hospital_analytics\models\patients_hospitalization.sql
+[0m13:44:58.126711 [info ] [MainThread]: 
+[0m13:44:58.131048 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:44:58.135430 [debug] [MainThread]: Command `dbt run` failed at 13:44:58.134067 after 10.29 seconds
+[0m13:44:58.137457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EB589090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E93758A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185EE07A650>]}
+[0m13:44:58.138464 [debug] [MainThread]: Flushing usage events
+[0m13:44:58.567440 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:58.928664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2C581150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2E462800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2E4629E0>]}
+
+
+============================== 13:47:58.942756 | 4028a404-de67-4090-beed-4993b231f52b ==============================
+[0m13:47:58.942756 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:47:58.946213 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:48:00.816181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4028a404-de67-4090-beed-4993b231f52b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2A3746D0>]}
+[0m13:48:01.061142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4028a404-de67-4090-beed-4993b231f52b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2E460DF0>]}
+[0m13:48:01.065221 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:48:02.960820 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:48:03.797368 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m13:48:03.801493 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_admission_by_month.sql
+[0m13:48:03.804729 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_demographics.sql
+[0m13:48:03.807225 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_hospitalization.sql
+[0m13:48:05.430060 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.hospital_analytics.patients_admission_by_month' (models\patients_admission_by_month.sql) depends on a source named 'hospital_analytics_schema.patients' which was not found
+[0m13:48:05.437352 [debug] [MainThread]: Command `dbt run` failed at 13:48:05.436263 after 6.80 seconds
+[0m13:48:05.439579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2C581150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2F65B220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000010F2F65ADD0>]}
+[0m13:48:05.441623 [debug] [MainThread]: Flushing usage events
+[0m13:48:05.862970 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:50:33.423479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E689090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA50562800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA505629E0>]}
+
+
+============================== 13:50:33.438490 | 3960d41e-70e7-4e5c-a546-1eef0cba8ca5 ==============================
+[0m13:50:33.438490 [info ] [MainThread]: Running with dbt=1.10.2
+[0m13:50:33.442807 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\ayman\\desktop\\hospital-analytics\\dbt\\hospital_analytics\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\ayman\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:50:35.399110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA50FEE680>]}
+[0m13:50:35.653365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4EEAB0A0>]}
+[0m13:50:35.657786 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m13:50:37.373234 [debug] [MainThread]: checksum: 1adc40777973ef30f45f80b3b6d04d5013c1edd53d96363881b3b199e612468b, vars: {}, profile: , target: , version: 1.10.2
+[0m13:50:38.126126 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 4 files changed.
+[0m13:50:38.131333 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\schema.yml
+[0m13:50:38.134332 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_hospitalization.sql
+[0m13:50:38.136332 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_demographics.sql
+[0m13:50:38.137333 [debug] [MainThread]: Partial parsing: updated file: hospital_analytics://models\patients_admission_by_month.sql
+[0m13:50:40.351477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA519C0370>]}
+[0m13:50:40.783381 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:50:40.792463 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:50:40.872566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA519C22C0>]}
+[0m13:50:40.875594 [info ] [MainThread]: Found 3 models, 9 data tests, 1 source, 476 macros
+[0m13:50:40.877595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA519C2350>]}
+[0m13:50:40.886463 [info ] [MainThread]: 
+[0m13:50:40.888618 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:50:40.890852 [info ] [MainThread]: 
+[0m13:50:40.892137 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:50:40.917939 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB'
+[0m13:50:41.423492 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB"
+[0m13:50:41.426487 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB"} */
+show terse schemas in database HOSPITAL_ANALYTICS_DB
+    limit 10000
+[0m13:50:41.429879 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:50:42.151770 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.723 seconds
+[0m13:50:42.159960 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema'
+[0m13:50:42.204042 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:50:42.205057 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:50:42.207090 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:50:42.716373 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.509 seconds
+[0m13:50:42.730013 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:50:42.733541 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+show objects in HOSPITAL_ANALYTICS_DB.hospital_analytics_schema
+    limit 10000
+    
+;
+[0m13:50:42.833091 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.098 seconds
+[0m13:50:42.840154 [debug] [ThreadPool]: Using snowflake connection "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"
+[0m13:50:42.841158 [debug] [ThreadPool]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "connection_name": "list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:50:42.915891 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.072 seconds
+[0m13:50:42.924246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4C60BA90>]}
+[0m13:50:42.938920 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_admission_by_month
+[0m13:50:42.940929 [info ] [Thread-1 (]: 1 of 3 START sql view model hospital_analytics_schema.patients_admission_by_month  [RUN]
+[0m13:50:42.945688 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.hospital_analytics.patients_admission_by_month'
+[0m13:50:42.948687 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_admission_by_month
+[0m13:50:42.981046 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:50:42.986064 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_admission_by_month
+[0m13:50:43.102643 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_admission_by_month"
+[0m13:50:43.107721 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_admission_by_month"
+[0m13:50:43.109729 [debug] [Thread-1 (]: On model.hospital_analytics.patients_admission_by_month: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_admission_by_month"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_admission_by_month
+  
+   as (
+    select
+  date_trunc('month', date_admission) as admission_month,
+  count(distinct id) as nb_patients
+from hospital_analytics_db.hospital_analytics_schema.patients
+where date_admission is not null
+group by 1
+order by 1
+  );
+[0m13:50:43.113731 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:50:43.543238 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.430 seconds
+[0m13:50:43.628599 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E7590C0>]}
+[0m13:50:43.633330 [info ] [Thread-1 (]: 1 of 3 OK created sql view model hospital_analytics_schema.patients_admission_by_month  [[32mSUCCESS 1[0m in 0.68s]
+[0m13:50:43.636806 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_admission_by_month
+[0m13:50:43.640131 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_demographics
+[0m13:50:43.642177 [info ] [Thread-1 (]: 2 of 3 START sql view model hospital_analytics_schema.patients_demographics .... [RUN]
+[0m13:50:43.646232 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_admission_by_month, now model.hospital_analytics.patients_demographics)
+[0m13:50:43.649349 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_demographics
+[0m13:50:43.660439 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_demographics"
+[0m13:50:43.666360 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_demographics
+[0m13:50:43.678086 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_demographics"
+[0m13:50:43.685254 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_demographics"
+[0m13:50:43.688255 [debug] [Thread-1 (]: On model.hospital_analytics.patients_demographics: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_demographics"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_demographics
+  
+   as (
+    select
+  sexe,
+  case
+    when age between 0 and 17 then '0-17'
+    when age between 18 and 35 then '18-35'
+    when age between 36 and 60 then '36-60'
+    else '60+'
+  end as age_group,
+  count(*) as nb_patients
+from hospital_analytics_db.hospital_analytics_schema.patients
+group by 1, 2
+order by 1, 2
+  );
+[0m13:50:43.870967 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.181 seconds
+[0m13:50:43.879719 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E4CE950>]}
+[0m13:50:43.883391 [info ] [Thread-1 (]: 2 of 3 OK created sql view model hospital_analytics_schema.patients_demographics  [[32mSUCCESS 1[0m in 0.23s]
+[0m13:50:43.887117 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_demographics
+[0m13:50:43.889143 [debug] [Thread-1 (]: Began running node model.hospital_analytics.patients_hospitalization
+[0m13:50:43.891309 [info ] [Thread-1 (]: 3 of 3 START sql view model hospital_analytics_schema.patients_hospitalization . [RUN]
+[0m13:50:43.893325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.hospital_analytics.patients_demographics, now model.hospital_analytics.patients_hospitalization)
+[0m13:50:43.898369 [debug] [Thread-1 (]: Began compiling node model.hospital_analytics.patients_hospitalization
+[0m13:50:43.909204 [debug] [Thread-1 (]: Writing injected SQL for node "model.hospital_analytics.patients_hospitalization"
+[0m13:50:43.914912 [debug] [Thread-1 (]: Began executing node model.hospital_analytics.patients_hospitalization
+[0m13:50:43.926710 [debug] [Thread-1 (]: Writing runtime sql for node "model.hospital_analytics.patients_hospitalization"
+[0m13:50:43.933761 [debug] [Thread-1 (]: Using snowflake connection "model.hospital_analytics.patients_hospitalization"
+[0m13:50:43.935940 [debug] [Thread-1 (]: On model.hospital_analytics.patients_hospitalization: /* {"app": "dbt", "dbt_version": "1.10.2", "profile_name": "hospital_analytics", "target_name": "dev", "node_id": "model.hospital_analytics.patients_hospitalization"} */
+create or replace   view HOSPITAL_ANALYTICS_DB.hospital_analytics_schema.patients_hospitalization
+  
+   as (
+    select 
+  id,
+  nom,
+  sexe,
+  age,
+  date_admission,
+  current_date - date_admission as days_hospitalized
+from hospital_analytics_db.hospital_analytics_schema.patients
+where date_admission is not null
+  );
+[0m13:50:44.185125 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.247 seconds
+[0m13:50:44.193126 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3960d41e-70e7-4e5c-a546-1eef0cba8ca5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E4CE950>]}
+[0m13:50:44.197182 [info ] [Thread-1 (]: 3 of 3 OK created sql view model hospital_analytics_schema.patients_hospitalization  [[32mSUCCESS 1[0m in 0.30s]
+[0m13:50:44.201689 [debug] [Thread-1 (]: Finished running node model.hospital_analytics.patients_hospitalization
+[0m13:50:44.205789 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:50:44.206794 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB' was left open.
+[0m13:50:44.208804 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB: Close
+[0m13:50:44.316618 [debug] [MainThread]: Connection 'list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema' was left open.
+[0m13:50:44.318619 [debug] [MainThread]: On list_HOSPITAL_ANALYTICS_DB_hospital_analytics_schema: Close
+[0m13:50:44.408913 [debug] [MainThread]: Connection 'model.hospital_analytics.patients_hospitalization' was left open.
+[0m13:50:44.410914 [debug] [MainThread]: On model.hospital_analytics.patients_hospitalization: Close
+[0m13:50:44.501537 [info ] [MainThread]: 
+[0m13:50:44.503627 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 3.61 seconds (3.61s).
+[0m13:50:44.509673 [debug] [MainThread]: Command end result
+[0m13:50:44.620768 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\manifest.json
+[0m13:50:44.632373 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\semantic_manifest.json
+[0m13:50:44.659592 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayman\desktop\hospital-analytics\dbt\hospital_analytics\target\run_results.json
+[0m13:50:44.663973 [info ] [MainThread]: 
+[0m13:50:44.667267 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:50:44.669578 [info ] [MainThread]: 
+[0m13:50:44.671705 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m13:50:44.675831 [debug] [MainThread]: Command `dbt run` succeeded at 13:50:44.675831 after 11.68 seconds
+[0m13:50:44.681179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E689090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4C3CE0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BA4E72CF40>]}
+[0m13:50:44.684400 [debug] [MainThread]: Flushing usage events
+[0m13:50:45.099984 [debug] [MainThread]: An error was encountered while trying to flush usage events
