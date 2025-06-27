@@ -1,50 +1,50 @@
 🏥 Hospital_Analytics
-Projet personnel — par Aymane RAMI (2025)
+Personal project — by Aymane RAMI (2025)
 
-🎯 Objectif
-Simuler un pipeline analytique complet pour un hôpital fictif :
-génération de données de santé → ingestion dans Snowflake → transformation avec dbt → visualisation avec Tableau.
+🎯 Project Goal
+Simulate a full data pipeline for a fictional hospital:
+health data generation → ingestion into Snowflake → transformation using dbt → visualization with Tableau.
 
-🛠️ Stack technique
-Python : génération de données (Faker, Pandas, NumPy)
+🛠️ Tech Stack
+Python: data generation (Faker, Pandas, NumPy)
 
-Snowflake : entrepôt de données cloud
+Snowflake: cloud data warehouse
 
-dbt : transformations SQL & modélisation
+dbt: SQL transformations & modeling
 
-Tableau : visualisation des données
+Tableau: data visualization
 
-SnowSQL : chargement et export de données
+SnowSQL: data loading and exporting
 
-Git/GitHub : versioning
+Git/GitHub: version control
 
-📁 Structure du projet
+📁 Project Structure
 bash
 Copier
 Modifier
 hospital_analytics/
-├── data/csv/                  # Fichiers générés (patients, doctors, etc.)
-├── data_generator.py          # Script principal de génération
-├── dbt/hospital_analytics/    # Projet dbt (modèles, config)
+├── data/csv/                  # Generated CSV files (patients, doctors, etc.)
+├── data_generator.py          # Main data generation script
+├── dbt/hospital_analytics/    # dbt project (models, config)
 └── README.md
-✅ Fonctionnement
-Génération : création de données synthétiques (patients, médecins, hospitalisations…)
+✅ Workflow
+Data Generation: simulate realistic data (patients, doctors, hospital stays…)
 
-Chargement : envoi des fichiers CSV dans Snowflake via SnowSQL
+Loading: upload CSV files to Snowflake using SnowSQL
 
-Modélisation : création de vues analytiques avec dbt (ex : admissions par mois)
+Modeling: create analytical views with dbt (e.g., monthly admissions)
 
-Export/Visualisation : extraction CSV → visualisation dans Tableau
+Export/Visualization: export results → visualize in Tableau
 
-🚧 Améliorations prévues
-Automatisation complète (GitHub Actions)
+🚧 Future Improvements
+Full pipeline automation (via GitHub Actions or similar)
 
-Connexion live Tableau ↔️ Snowflake
+Live Tableau ↔️ Snowflake connection
 
-Enrichissement des dashboards (KPI santé)
+Dashboard enrichment (e.g., healthcare KPIs)
 
-Tests de qualité & reporting automatique
+Data testing & automated reporting
 
 📌 Conclusion
-Hospital_Analytics illustre un pipeline de données de bout en bout, combinant des outils modernes de la data.
-Un projet extensible, adapté aux cas d’usage en data engineering ou BI dans la santé.
+Hospital_Analytics showcases an end-to-end analytics pipeline using modern data tools.
+The project is a solid foundation for real-world applications in data engineering or BI in healthcare, and can be extended significantly.
