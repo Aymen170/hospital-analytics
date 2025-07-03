@@ -20,26 +20,26 @@ HospitalAnalytics is a personal data engineering project that simulates hospital
   
 # Repository Structure
 
-  HospitalAnalytics/
-  ├── data/
-  │   └── csv/
-  │       ├── patients.csv
-  │       ├── doctors.csv
-  │       ├── hospitalizations.csv
-  │       ├── admissions_by_month.csv
-  ├── generate_fake_data.py              # Python script for simulating hospital data
-  ├── analyze_results.py                 # Python script for querying Snowflake and generating visualizations
-  ├── dbt/
-  │   └── hospital_analytics/
-  │       ├── dbt_project.yml
-  │       └── models/
-  │           ├── patients_demographics.sql
-  │           ├── patients_admissions_by_month.sql
-  │           ├── patients_hospitalizations.sql
-  ├── export/                            # Exported data from Snowflake (e.g., .csv.gz)
-  ├── dashboard.twb                      # Tableau dashboard file
-  └── README.md
-  
+    HospitalAnalytics/
+    ├── data/
+    │   └── csv/
+    │       ├── patients.csv
+    │       ├── doctors.csv
+    │       ├── hospitalizations.csv
+    │       ├── admissions_by_month.csv
+    ├── generate_fake_data.py              # Python script for simulating hospital data
+    ├── analyze_results.py                 # Python script for querying Snowflake and generating visualizations
+    ├── dbt/
+    │   └── hospital_analytics/
+    │       ├── dbt_project.yml
+    │       └── models/
+    │           ├── patients_demographics.sql
+    │           ├── patients_admissions_by_month.sql
+    │           ├── patients_hospitalizations.sql
+    ├── export/                            # Exported data from Snowflake (e.g., .csv.gz)
+    ├── dashboard.twb                      # Tableau dashboard file
+    └── README.md
+    
 # Workflow Summary
 ## 1. Data Generation (generate_fake_data.py)
   Simulates healthcare data using Faker, pandas, and numpy:
