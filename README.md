@@ -1,11 +1,14 @@
-🏥 Hospital_Analytics
+# __Hospital Analytics__
+
 Personal project — by Aymane RAMI (2025)
 
-🎯 Project Goal
+## **Project Goal**
+
 Simulate a full data pipeline for a fictional hospital:
 health data generation → ingestion into Snowflake → transformation using dbt → visualization with Tableau.
 
-🛠️ Tech Stack
+## **Tech Stack**
+
 Python: data generation (Faker, Pandas, NumPy)
 
 Snowflake: cloud data warehouse
@@ -18,7 +21,9 @@ SnowSQL: data loading and exporting
 
 Git/GitHub: version control
 
-📁 Project Structure
+
+## **Project Structure**
+
 bash
 Copier
 Modifier
@@ -36,7 +41,9 @@ Modeling: create analytical views with dbt (e.g., monthly admissions)
 
 Export/Visualization: export results → visualize in Tableau
 
-🚧 Future Improvements
+
+## **Future Improvements**
+
 Full pipeline automation (via GitHub Actions or similar)
 
 Live Tableau ↔️ Snowflake connection
@@ -45,6 +52,7 @@ Dashboard enrichment (e.g., healthcare KPIs)
 
 Data testing & automated reporting
 
-📌 Conclusion
+# **Conclusion**
+
 Hospital_Analytics showcases an end-to-end analytics pipeline using modern data tools.
 The project is a solid foundation for real-world applications in data engineering or BI in healthcare, and can be extended significantly.
