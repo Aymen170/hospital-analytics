@@ -96,5 +96,6 @@ Data exported from Snowflake is used to build an interactive Tableau dashboard:
 
 # 👨‍💻 Author
 ***Aymane RAMI***
+
 **Data & Software Engineering Enthusiast**
 
