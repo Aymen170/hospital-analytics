@@ -1,58 +1,100 @@
-# __Hospital Analytics__
+# **HospitalAnalytics**
+A simulated data pipeline for hospital operations using Snowflake, dbt, and Python. It includes fake data generation, transformations, and analytics to uncover insights about patients, doctors, and hospitalizations.
 
-Personal project — by Aymane RAMI (2025)
+## Project Overview
+HospitalAnalytics is a personal data engineering project that simulates hospital activity and patient data. It showcases the modern data workflow — from synthetic data generation to SQL-based transformation and Python-based statistical analysis — all designed to support healthcare decision-making scenarios.
 
-## **Project Goal**
+## Tech Stack
 
-Simulate a full data pipeline for a fictional hospital:
-health data generation → ingestion into Snowflake → transformation using dbt → visualization with Tableau.
+  Languages: Python 3.10, SQL
+  
+  Libraries: pandas, faker, matplotlib, numpy, snowflake-connector-python
+  
+  Data Warehouse: Snowflake
+  
+  Transformation Tool: dbt (Data Build Tool)
+  
+  Visualization: Tableau Desktop (Free version)
+  
+  Version Control: Git & GitHub
+  
+# Repository Structure
 
-## **Tech Stack**
+  HospitalAnalytics/
+  ├── data/
+  │   └── csv/
+  │       ├── patients.csv
+  │       ├── doctors.csv
+  │       ├── hospitalizations.csv
+  │       ├── admissions_by_month.csv
+  ├── generate_fake_data.py              # Python script for simulating hospital data
+  ├── analyze_results.py                 # Python script for querying Snowflake and generating visualizations
+  ├── dbt/
+  │   └── hospital_analytics/
+  │       ├── dbt_project.yml
+  │       └── models/
+  │           ├── patients_demographics.sql
+  │           ├── patients_admissions_by_month.sql
+  │           ├── patients_hospitalizations.sql
+  ├── export/                            # Exported data from Snowflake (e.g., .csv.gz)
+  ├── dashboard.twb                      # Tableau dashboard file
+  └── README.md
+  
+# Workflow Summary
+## 1. Data Generation (generate_fake_data.py)
+  Simulates healthcare data using Faker, pandas, and numpy:
+  
+    - 500 patients: ID, name, gender, birthdate, admission dates, etc.
+  
+    - 100 doctors: name, specialty
+  
+    - 1000 hospitalizations: patient ID, doctor ID, diagnosis, length of stay
+  
+  Outputs: patients.csv, doctors.csv, hospitalizations.csv, admissions_by_month.csv
 
-Python: data generation (Faker, Pandas, NumPy)
+## 2. Load to Snowflake
+  
+  - Connects with snowflake-connector-python
+  
+  - Creates a HOSPITAL_ANALYTICS_DB with a RAW schema
+  
+  - Loads CSVs into internal stages
+  
+  - Uses COPY INTO to insert data into Snowflake tables
 
-Snowflake: cloud data warehouse
+## 3. Transform Data with dbt
+  
+  Performs SQL transformations using a custom dbt project:
+  
+    - patients_demographics.sql: Counts patients by gender
+  
+    - patients_admissions_by_month.sql: Aggregates admissions by month
+  
+    - patients_hospitalizations.sql: Calculates average length of stay
 
-dbt: SQL transformations & modeling
+## 4. Analyze Results (analyze_results.py)
 
-Tableau: data visualization
+Connects to Snowflake, queries transformed tables, and generates visualizations:
 
-SnowSQL: data loading and exporting
+    - Monthly admissions trend (bar chart)
+  
+    - Gender distribution (pie or bar chart)
+  
+    - Average stay duration (line chart)
 
-Git/GitHub: version control
+    - Visuals generated using Matplotlib and saved locally.
 
+## 5. Visualize with Tableau
 
-## **Project Structure**
+Data exported from Snowflake is used to build an interactive Tableau dashboard:
 
-bash
-Copier
-Modifier
-hospital_analytics/
-├── data/csv/                  # Generated CSV files (patients, doctors, etc.)
-├── data_generator.py          # Main data generation script
-├── dbt/hospital_analytics/    # dbt project (models, config)
-└── README.md
-✅ Workflow
-Data Generation: simulate realistic data (patients, doctors, hospital stays…)
+    - KPIs (e.g., total admissions, average stay)
 
-Loading: upload CSV files to Snowflake using SnowSQL
+    - Gender and age demographics
 
-Modeling: create analytical views with dbt (e.g., monthly admissions)
+    - Admissions over time
 
-Export/Visualization: export results → visualize in Tableau
+# 👨‍💻 Author
+***Aymane RAMI***
+**Data & Software Engineering Enthusiast**
 
-
-## **Future Improvements**
-
-Full pipeline automation (via GitHub Actions or similar)
-
-Live Tableau ↔️ Snowflake connection
-
-Dashboard enrichment (e.g., healthcare KPIs)
-
-Data testing & automated reporting
-
-# **Conclusion**
-
-Hospital_Analytics showcases an end-to-end analytics pipeline using modern data tools.
-The project is a solid foundation for real-world applications in data engineering or BI in healthcare, and can be extended significantly.
